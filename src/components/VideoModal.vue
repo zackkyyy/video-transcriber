@@ -53,7 +53,6 @@ export default defineComponent({
           if (words.value.length >= 4) {
             words.value.splice(0);
           }
-          console.log(words.value);
         }
         if (frame > maxTime) {
           return;
@@ -69,7 +68,6 @@ export default defineComponent({
       emit("closeModal");
     };
 
-    console.log(words.value);
     return {
       handeCloseClick,
       words,

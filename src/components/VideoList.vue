@@ -66,8 +66,6 @@ export default defineComponent({
     watch(
       () => props.transcription,
       (transcription) => {
-        console.log("here");
-
         if (transcription) {
           showModal.value = true;
         }
