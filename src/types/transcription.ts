@@ -7,6 +7,7 @@ export interface Word {
 }
 
 export interface Transcription {
+  videoUrl: string;
   id: string;
   status: string;
   text: string;

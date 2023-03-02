@@ -3,7 +3,7 @@
     <div class="vidoe-modal">
       <button class="close-button" @click="handeCloseClick()">x</button>
       <video controls width="600" ref="myVideoPlayer" @play="onPlay">
-        <source :src="videoUrl" />
+        <source :src="transcription.videoUrl" />
       </video>
       <div>
         <span class="subtitle" v-for="(word, index) in words" :key="index">
