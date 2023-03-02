@@ -25,7 +25,7 @@
       @closeModal="handleClickCloseModal"
     >
     </VideoModal>
-    <div v-if="transcribting" class="loading-circle-container vidoe-modal">
+    <div v-if="transcribting" class="loading-circle-container">
       <div class="loading-circle"></div>
     </div>
   </div>

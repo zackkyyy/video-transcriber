@@ -2,20 +2,12 @@
   <div>
     <div class="vidoe-modal">
       <button class="close-button" @click="handeCloseClick()">x</button>
-      <video
-        :src="videoUrl"
-        controls
-        width="600"
-        ref="myVideoPlayer"
-        @play="onPlay"
-      ></video>
+      <video controls width="600" ref="myVideoPlayer" @play="onPlay">
+        <source :src="videoUrl" />
+      </video>
       <div>
-        <span
-          class="subtitle"
-          v-for="(word, index) in transcription.words"
-          :key="index"
-        >
-          {{ word.text }}
+        <span class="subtitle" v-for="(word, index) in words" :key="index">
+          {{ word }}
         </span>
       </div>
       <div class="transcription">
@@ -76,6 +68,8 @@ export default defineComponent({
     const handeCloseClick = () => {
       emit("closeModal");
     };
+
+    console.log(words.value);
     return {
       handeCloseClick,
       words,
@@ -126,7 +120,8 @@ export default defineComponent({
 .subtitle {
   background-color: #444;
   color: #fff;
-  padding: 12px;
+  margin-left: 10px;
   font-size: 18px;
+  position: sticky;
 }
 </style>
